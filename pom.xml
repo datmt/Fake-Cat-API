@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.datmt</groupId>
 	<artifactId>fake_api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>fake_api</name>
 	<description>Convenient apis endpoints for basic frontend needs</description>
 	<properties>

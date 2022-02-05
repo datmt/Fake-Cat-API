@@ -4,6 +4,8 @@ The project is simple, to provide simple, yet working CRUD API for frontend app.
 
 The entity is `Cat`
 
+
+
 ## API Overview
 * Create cat
 
