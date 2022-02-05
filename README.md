@@ -54,6 +54,10 @@ GET `/cats/list`
 POST `/cats`
 
 
+* Search for cat by name
+
+GET `/cats/search/{name}`
+
 
 ## License
 
