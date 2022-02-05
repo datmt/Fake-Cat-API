@@ -1,3 +1,3 @@
 ./mvnw package
 
-docker build -t codingpuss/fake-cat-api .
+docker build -f Dockerfile-local -t codingpuss/fake-cat-api .
