@@ -25,7 +25,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("cats")
@@ -99,5 +101,10 @@ public class CatController {
         int index = catRepository.getAllCats().indexOf(cat);
         catRepository.getAllCats().set(index, mutatedCat);
         return ResponseEntity.status(HttpStatus.OK).body(mutatedCat);
+    }
+
+    @GetMapping("/search/{name}")
+    public List<Cat> search(@PathVariable("name") String name) {
+        return catRepository.getAllCats().stream().filter(t -> t.getName().toLowerCase(Locale.ROOT).contains(name.toLowerCase(Locale.ROOT))).collect(Collectors.toList());
     }
 }
